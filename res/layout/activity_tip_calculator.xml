@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="calculateTip"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculatorActivity" >
+
+    <EditText
+        android:id="@+id/etTotalAmount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:inputType="numberDecimal"
+        android:hint="Enter Total Amount" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnTipTenPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btnTipFifteenPercent"
+        android:onClick="calculateTip"
+        android:tag="10"
+        android:text="10%" />
+
+    <Button
+        android:id="@+id/btnTipFifteenPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnTipTenPercent"
+        android:layout_centerHorizontal="true"
+        android:onClick="calculateTip"
+        android:tag="15"
+        android:text="15%" />
+
+    <Button
+        android:id="@+id/btnTipTwentyPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnTipFifteenPercent"
+        android:layout_alignBottom="@+id/btnTipFifteenPercent"
+        android:layout_toRightOf="@+id/btnTipFifteenPercent"
+        android:onClick="calculateTip"
+        android:tag="20"
+        android:text="20%" />
+
+    <TextView
+        android:id="@+id/tvTotalTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:text="Tip is: $0" />
+    
+</RelativeLayout>
